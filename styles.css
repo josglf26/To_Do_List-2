@@ -24,6 +24,8 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius);
+    margin: 30px;
+    box-sizing: border-box;
 }
 
 h1.app-title {
@@ -66,7 +68,7 @@ h1.app-title {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .add-btn:hover {
@@ -97,7 +99,7 @@ h1.app-title {
     padding: 10px;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.5s ease, transform 0.5s ease; 
 }
 
 .list-item:hover {
@@ -108,9 +110,15 @@ h1.app-title {
 .input-task {
     flex-grow: 1;
     border: none;
+    outline: none;
     padding: 5px;
     font-size: 16px;
     text-align: center;
+    border-radius: 8px;
+}
+
+.input-task:hover {
+    outline: 1px solid var(--primary-color);
 }
 
 .btn-delete, .btn-ready {
@@ -119,15 +127,17 @@ h1.app-title {
     cursor: pointer;
     padding: 5px;
     color: var(--text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-delete:hover {
     color: #e74c3c;
+    transform: scale(1.1)
 }
 
 .btn-ready:hover {
     color: var(--secondary-color);
+    transform: scale(1.1)
 }
 
 #task-stats {
@@ -165,4 +175,50 @@ h1.app-title {
 
 .incompleted {
     color: #e74c3c;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1.app-title {
+        font-size: 2.2rem;
+    }
+
+    .app-description {
+        font-size: 0.9rem;
+    }
+
+    #search {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 95%;
+        border-radius: var(--border-radius);
+        margin-bottom: 10px;
+    }
+
+    .add-btn {
+        width: 100%;
+        border-radius: var(--border-radius);
+    }
+
+    #task-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #task-1div,
+    #task-2div,
+    #task-3div {
+        margin-bottom: 10px;
+    }
 }

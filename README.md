@@ -1,2 +1,2 @@
 # To_Do_List-2
-To Do List template only html y css
+to do list template only html and css

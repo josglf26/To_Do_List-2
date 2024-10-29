@@ -19,7 +19,7 @@ body {
 
 #container {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,7 +88,7 @@ h1.app-title {
     padding: 0;
     margin: 0 0 20px 0;
     overflow-y: auto;
-    max-height: 400px;
+    max-height: 350px;
 }
 
 .list-item {
@@ -212,12 +212,22 @@ h1.app-title {
     }
 
     #task-stats {
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        font-size: 12px; 
+    }
+
+    #task-stats svg {
+        width: 14px; 
+        height: 14px;
     }
 
     #task-1div,
     #task-2div,
     #task-3div {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        width: 100%;
+        justify-content: center;
     }
 }
